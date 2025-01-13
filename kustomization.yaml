@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- manifests/pingpong_postgres/deployment.yaml
+- manifests/pingpong_postgres/service.yaml
+- manifests/pingpong_postgres/statefulset.yaml
+- manifests/pingpong_postgres/volumeclaim.yaml
+- manifests/pingpong/deployment.yaml
+- manifests/pingpong/service.yaml
+images:
+- name: PROJECT/IMAGE
+  newName: viksil/pingpong
