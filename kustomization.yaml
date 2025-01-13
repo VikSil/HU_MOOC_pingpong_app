@@ -7,6 +7,16 @@ resources:
 - manifests/pingpong_postgres/volumeclaim.yaml
 - manifests/pingpong/deployment.yaml
 - manifests/pingpong/service.yaml
+- manifests/log_output/service.yaml
+- manifests/log_output/deployment.yaml
+- manifests/log_output_reader/deployment.yaml
+- manifests/log_output_reader/service.yaml
+- manifests/log_output_reader/configmap.yaml
+- manifests/shared_ingress.yaml
 images:
 - name: PROJECT/IMAGE
   newName: viksil/pingpong
+- name: PROJECT1/IMAGE1
+  newName: viksil/log_output
+- name: PROJECT2/IMAGE2
+  newName: viksil/log_output_reader

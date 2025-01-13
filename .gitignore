@@ -1,4 +1,4 @@
-/target
+/apps/*/target
 Cargo.lock
 *.txt
 /manifests/*/secret.yaml

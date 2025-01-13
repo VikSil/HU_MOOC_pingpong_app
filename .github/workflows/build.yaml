@@ -20,6 +20,10 @@ jobs:
 
       - name: Build and publish backend
         run: |-
-          docker build --tag "viksil/pingpong" .
+          docker build --tag "viksil/pingpong" ./apps/pingpong
           docker push "viksil/pingpong"
+          docker build --tag "viksil/log_output" ./apps/log_output
+          docker push "viksil/log_output"
+          docker build --tag "viksil/log_output_reader" ./apps/log_output_reader
+          docker push "viksil/log_output_reader"
   
