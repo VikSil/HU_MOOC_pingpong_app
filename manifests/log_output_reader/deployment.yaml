@@ -44,9 +44,3 @@ spec:
           - name: configmap-volume
             mountPath: /usr/local/config
             readOnly: true
-          readinessProbe:
-            initialDelaySeconds: 350
-            periodSeconds: 10
-            httpGet:
-               path: /healthz
-               port: 3022
