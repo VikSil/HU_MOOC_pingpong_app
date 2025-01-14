@@ -4,7 +4,7 @@ metadata:
   namespace: pinglog-namespace
   name: log-reader-service
 spec:
-  type:  NodePort
+  type:  LoadBalancer
   selector:
     app: log-reader
   ports:

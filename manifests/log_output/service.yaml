@@ -4,7 +4,7 @@ metadata:
   namespace: pinglog-namespace
   name: log-output-service
 spec:
-  type:  NodePort
+  type:  LoadBalancer
   selector:
     app: log-output
   ports:
