@@ -21,4 +21,4 @@ spec:
           service:
             name: log-reader-service
             port:
-              number: 3022
+              number: 80

@@ -7,5 +7,5 @@ data:
   message: "hello world"
   information.txt: |
     this text is from file
-  pingpong_hostname: "pingpong-service:3032"
-  log_hostname: "log-output-service:3010"
+  pingpong_hostname: "pingpong-service"
+  log_hostname: "log-output-service"
