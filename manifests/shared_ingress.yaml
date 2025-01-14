@@ -4,7 +4,6 @@ metadata:
   namespace: pinglog-namespace
   name: log-reader-ingress
 spec:
-  ingressClassName: nginx
   rules:
   - http:
       paths:
