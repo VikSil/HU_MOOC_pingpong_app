@@ -20,10 +20,25 @@ jobs:
 
       - name: Build and publish backend
         run: |-
-          docker build --tag "viksil/pingpong" ./apps/pingpong
-          docker push "viksil/pingpong"
-          docker build --tag "viksil/log_output" ./apps/log_output
-          docker push "viksil/log_output"
-          docker build --tag "viksil/log_output_reader" ./apps/log_output_reader
-          docker push "viksil/log_output_reader"
+          docker build --tag "viksil/pingpong:$GITHUB_SHA" ./apps/pingpong
+          docker push "viksil/pingpong:$GITHUB_SHA"
+          docker build --tag "viksil/log_output:$GITHUB_SHA" ./apps/log_output
+          docker push "viksil/log_output:$GITHUB_SHA"
+          docker build --tag "viksil/log_output_reader:$GITHUB_SHA" ./apps/log_output_reader
+          docker push "viksil/log_output_reader:$GITHUB_SHA"
   
+      - name: Set up Kustomize
+        uses: imranismail/setup-kustomize@v2
+
+      - name: Use right image
+        run: kustomize edit set image PROJECT/IMAGE=viksil/pingpong:$GITHUB_SHA
+      - name: Use right image1
+        run: kustomize edit set image PROJECT1/IMAGE1=viksil/log_output:$GITHUB_SHA
+      - name: Use right image2
+        run: kustomize edit set image PROJECT2/IMAGE2=viksil/log_output_reader:$GITHUB_SHA
+
+      - name: commit kustomization.yaml to GitHub
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'kustomization.yaml'
+          message: New version released ${{ github.sha }}
