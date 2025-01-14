@@ -45,7 +45,7 @@ spec:
             mountPath: /usr/local/config
             readOnly: true
           readinessProbe:
-            initialDelaySeconds: 270
+            initialDelaySeconds: 350
             periodSeconds: 10
             httpGet:
                path: /healthz

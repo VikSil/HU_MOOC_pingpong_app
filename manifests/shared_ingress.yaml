@@ -4,6 +4,7 @@ metadata:
   namespace: pinglog-namespace
   name: log-reader-ingress
 spec:
+  ingressClassName: nginx
   rules:
   - http:
       paths:
@@ -20,4 +21,4 @@ spec:
           service:
             name: log-reader-service
             port:
-              number: 80
+              number: 3022
