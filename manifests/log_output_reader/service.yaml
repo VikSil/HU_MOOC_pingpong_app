@@ -8,6 +8,6 @@ spec:
   selector:
     app: log-reader
   ports:
-    - port: 3022
+    - port: 80
       protocol: TCP
       targetPort: 3022
