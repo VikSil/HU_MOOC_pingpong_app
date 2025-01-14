@@ -16,10 +16,10 @@ resources:
 images:
 - name: PROJECT/IMAGE
   newName: viksil/pingpong
-  newTag: 1aa972797af75b45097c5eb6bf56485466fdb63e
+  newTag: 35b2b72731be163d52189a2b3722bda0ab4e6f30
 - name: PROJECT1/IMAGE1
   newName: viksil/log_output
-  newTag: 1aa972797af75b45097c5eb6bf56485466fdb63e
+  newTag: 35b2b72731be163d52189a2b3722bda0ab4e6f30
 - name: PROJECT2/IMAGE2
   newName: viksil/log_output_reader
-  newTag: 1aa972797af75b45097c5eb6bf56485466fdb63e
+  newTag: 35b2b72731be163d52189a2b3722bda0ab4e6f30
